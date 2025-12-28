@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 主色调 */
+  --primary-pink: #FFB6C1;
+  --primary-mint: #B4E7CE;
+  --primary-cream: #FFF4E0;
+
+  /* 情绪色 */
+  --emotion-happy: #FFD93D;
+  --emotion-calm: #A8E6CF;
+  --emotion-sad: #B4C7E7;
+  --emotion-stressed: #F8C8DC;
+
+  /* 中性色 */
+  --text-dark: #6B5B5B;
+  --text-light: #9E9E9E;
+  --bg-white: #FFFFFF;
+  --bg-light: #F9F9F9;
+
+  /* 功能色 */
+  --shadow: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.05);
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 50%;
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'HarmonyOS Sans', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 呼吸动画 */
+@keyframes breathing {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* 眨眼动画 */
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* 淡入上升动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 渐变背景类 */
+.gradient-happy {
+  background: linear-gradient(135deg, #FFD93D 0%, #FFF4C3 100%);
+}
+
+.gradient-calm {
+  background: linear-gradient(135deg, #A8E6CF 0%, #D4F1E8 100%);
+}
+
+.gradient-sad {
+  background: linear-gradient(135deg, #B4C7E7 0%, #D4E4F7 100%);
+}
+
+.gradient-stressed {
+  background: linear-gradient(135deg, #F8C8DC 0%, #FFE5EC 100%);
+}
